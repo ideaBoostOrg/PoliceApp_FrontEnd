@@ -1,24 +1,20 @@
-import React, { FC } from 'react';
-import { Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-
+import React, { FC } from "react";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Dashboard from "./components/Dashboard";
+import "./assests/styles/main.scss"
 
 const App: FC = () => {
   return (
     <div>
-      <Home/>
-    <Router location={''} navigator={undefined}>
-      
+      <Router >
         <Routes>
-          <Route  path="/" Component={Home} />
-          <Route  path="/about" Component={About} />
-
+          <Route path="/" element={<Dashboard/>} />
+          <Route path="/about" element={<About />} />
         </Routes>
-      
-    </Router>
+      </Router>
     </div>
-    
   );
 };
 
