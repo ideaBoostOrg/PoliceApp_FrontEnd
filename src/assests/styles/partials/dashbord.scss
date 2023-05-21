@@ -1,4 +1,29 @@
 
+
 .custom-card {
+  margin-top: 1em;
   background-color: $card-bg;
+  height: 5em;
+
+}
+
+
+.card-btn {
+  border-color: $btn-bg;
+  background: $btn-bg;
+  color: white;
+  padding: .4em 1.5em 2.1em 1.5em;
+    margin-top: 0.5em;
+  width: 150px;
+  float: right;
+
+  &:hover {
+    background: #ffffff;
+    border: 1px solid $btn-bg;
+    color: $btn-bg;
+  }
+
+  @media (max-width: $sm) {
+    margin-top: .5em !important;
+  }
 }

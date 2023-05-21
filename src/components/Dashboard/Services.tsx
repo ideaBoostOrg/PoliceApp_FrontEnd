@@ -12,17 +12,39 @@ const Services: FC = () => {
                     <p>Apply online for clearance certificates.</p>
                     </Col>
                     <Col span={4}>
-                    <p><Button type="primary" >Apply</Button></p>
+                    <Button  className="card-btn">Apply</Button>
                     </Col>
                     </Row>
                 </Card>
-                <Card
-                    style={{ marginTop: 16 }}
-                    type="inner"
-                    title="Inner Card title"
-                    extra={<a href="#">More</a>}
-                >
-                    Inner Card content
+                <Card type="inner"  className="custom-card">
+                    <Row>
+                        <Col span={20}>
+                            <p>Apply online for clearance certificates.</p>
+                        </Col>
+                        <Col span={4}>
+                            <Button  className="card-btn">Apply</Button>
+                        </Col>
+                    </Row>
+                </Card>
+                <Card type="inner"  className="custom-card">
+                    <Row>
+                        <Col span={20}>
+                            <p>Apply online for clearance certificates.</p>
+                        </Col>
+                        <Col span={4}>
+                            <Button  className="card-btn">Apply</Button>
+                        </Col>
+                    </Row>
+                </Card>
+                <Card type="inner"  className="custom-card">
+                    <Row>
+                        <Col span={20}>
+                            <p>Apply online for clearance certificates.</p>
+                        </Col>
+                        <Col span={4}>
+                            <Button  className="card-btn">Apply</Button>
+                        </Col>
+                    </Row>
                 </Card>
             </Card>
 
