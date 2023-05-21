@@ -14,7 +14,7 @@ const App: FC = () => {
     return (
         <>
             <Header/>
-            <HashRouter>
+            <Router>
                 <Routes>
                     <Route path="/" element={<Dashboard/>}/>
                     <Route path="/instructions" element={<Instructions/>}/>
@@ -22,7 +22,7 @@ const App: FC = () => {
                     <Route path="/requestClarificationInstructions" element={<RequestClarificationInstructions/>}/>
                     <Route path="/certificateVerification" element={<CertificateVerification/>}/>
                 </Routes>
-            </HashRouter>
+            </Router>
         </>
 
     );
