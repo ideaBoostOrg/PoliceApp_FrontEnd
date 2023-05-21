@@ -1,12 +1,11 @@
 import React from "react";
 import { Breadcrumb, Button, Col, Row, Typography , Card, Input } from 'antd';
 import Title from "antd/es/typography/Title";
-import Header from './header'
+import Header from './Header'
 
 const RequestClarificationInstructions = () => {
     return(
         <>
-        <Header/>
         <div style={{backgroundColor:"#F5F5F5"}}>
         <Card title={<Title level={1}>Instructions</Title>} bordered={false} style={{ width: "60%" , marginLeft:"20%" , marginTop:"18px"}}>
             <div>
@@ -39,7 +38,7 @@ const RequestClarificationInstructions = () => {
                                     Re submit NIC copy
                                 </li>
                                 <li>
-                                    Re submit passport copy 
+                                    Re submit passport copy
                                 </li>
                                 <li>
                                     Verify Name
@@ -48,23 +47,23 @@ const RequestClarificationInstructions = () => {
                                     Verify Date of Birth
                                 </li>
                             </ul>
-                            
+
                             <br/>
                         </div>
                     </Col>
                 </Row>
                 {/* <Row>
                     <Col span={8}>
-                        
+
                     </Col>
                     <Col span={8}>
                         <div style={{textAlign:"center" , marginTop : "20px"}}>
                         <Button style={{backgroundColor:"#1E33EE" , color:"#ffff" , width:"200px", height:"40px" , fontWeight:"bold"}}>Proceed</Button>
                         </div>
-                        
+
                     </Col>
                     <Col span={8}>
-                        
+
                     </Col>
                 </Row> */}
                 <Row>
@@ -83,7 +82,7 @@ const RequestClarificationInstructions = () => {
             </div>
         </Card>
         </div>
-            
+
         </>
     );
 }

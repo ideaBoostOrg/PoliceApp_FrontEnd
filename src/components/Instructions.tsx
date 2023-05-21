@@ -1,12 +1,12 @@
 import React from "react";
 import { Breadcrumb, Button, Col, Row, Typography , Card } from 'antd';
 import Title from "antd/es/typography/Title";
-import Header from './header'
+import Header from './Header'
 
 const Instructions = () => {
     return(
         <>
-        <Header/>
+
         <div style={{backgroundColor:"#F5F5F5"}}>
         <Card title={<Title level={1}>Instructions</Title>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
             <div>
@@ -93,11 +93,11 @@ const Instructions = () => {
                 </Row>
                 <Row>
                     <Col span={8}>
-                        
+
                     </Col>
                     <Col span={8}>
-                        
-                        
+
+
                     </Col>
                     <Col span={8}>
                         <div style={{textAlign:"right" , marginTop : "20px"}}>
@@ -108,7 +108,7 @@ const Instructions = () => {
             </div>
         </Card>
         </div>
-            
+
         </>
     );
 }

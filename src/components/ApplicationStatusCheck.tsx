@@ -1,28 +1,28 @@
 import React from "react";
 import { Breadcrumb, Button, Col, Row, Typography , Card, Input } from 'antd';
 import Title from "antd/es/typography/Title";
-import Header from './header'
+import Header from './Header'
 
 const ApplicationStatusCheck = () => {
     return(
         <>
-        <Header/>
+
         {/* <Row>
             <Col span={6}>
             <Title level={5} style={{marginLeft:"60%"}}>Application Status</Title>
             </Col>
             <Col span={6}>
-                
+
             </Col>
             <Col span={6}>
-                
+
             </Col>
             <Col span={4}>
                 <Title level={5}>Maneth Wijethunga | <span style={{color:"blue"}}>Logout</span></Title>
             </Col>
-            
+
         </Row> */}
-        
+
         <Card bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"30px", marginBottom:"30px"}}>
             <Row>
                 <Col span={6}>
@@ -50,7 +50,7 @@ const ApplicationStatusCheck = () => {
 
                 </Col>
                 <Col span={4}>
-                    
+
                 </Col>
                 <Col span={4} style={{marginRight:"0px"}}>
                 <div style={{fontSize:"18px" , fontWeight:"unset"}}>Reference Number:<span style={{color:"red"}}>*</span></div>
@@ -62,7 +62,7 @@ const ApplicationStatusCheck = () => {
                     <Button>Submit</Button>
                 </Col>
                 <Col span={4}>
-                    
+
                 </Col>
             </Row> */}
             <Row>
@@ -78,8 +78,8 @@ const ApplicationStatusCheck = () => {
                 </Col>
                 <Col span={3}></Col>
             </Row>
-            
-            
+
+
         </Card>
 
         <div id="result-card" style={{display:"none"}}>
@@ -87,8 +87,8 @@ const ApplicationStatusCheck = () => {
 
             </Card>
         </div>
-        
-            
+
+
         </>
     );
 }
