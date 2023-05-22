@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './assests/styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppWithRouter from "./App";
 
 
 
@@ -11,7 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <AppWithRouter />
 
   </React.StrictMode>
 );
