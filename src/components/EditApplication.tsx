@@ -77,7 +77,7 @@ const tailFormItemLayout = {
     },
 };
 
-const ClearanceCertificateApplication: React.FC = () => {
+const EditApplication: React.FC = () => {
     const [form] = Form.useForm();
 
     const [showOtherDropdown, setShowOtherDropdown] = useState(false);
@@ -119,7 +119,7 @@ const ClearanceCertificateApplication: React.FC = () => {
     return (
         <>
             <div style={{ backgroundColor: "#F5F5F5" }}>
-                <Card title={<Title level={1}>Application</Title>} bordered={false} style={{ width: "70%", marginLeft: "15%", marginTop: "18px" }}>
+                <Card title={<Title level={1}>Edit Application</Title>} bordered={false} style={{ width: "70%", marginLeft: "15%", marginTop: "18px" }}>
                     <div>
                         <Row>
                             <Col span={18}>
@@ -129,10 +129,10 @@ const ClearanceCertificateApplication: React.FC = () => {
                                             title: 'Home',
                                         },
                                         {
-                                            title: 'Clearance certificate instructions',
+                                            title: 'Request for clarification',
                                         },
                                         {
-                                            title: 'Clearance certificate application',
+                                            title: 'Edit application',
                                         },
                                     ]} />
                             </Col>
@@ -543,4 +543,4 @@ const ClearanceCertificateApplication: React.FC = () => {
     );
 };
 
-export default ClearanceCertificateApplication;
+export default EditApplication;
