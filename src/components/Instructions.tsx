@@ -6,9 +6,8 @@ import Header from './Header'
 const Instructions = () => {
     return(
         <>
-
         <div style={{backgroundColor:"#F5F5F5"}}>
-        <Card title={<Title level={1}>Instructions</Title>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
+        <Card title={<Title level={1}><span style={{color:"blue"}}>Instructions</span></Title>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
             <div>
                 {/* <Row>
                     <Col span={24}><Title level={1}>Instructions</Title></Col>
@@ -67,7 +66,7 @@ const Instructions = () => {
                                     </li>
                                 </ul>
                                 <li>
-                                    <span style={{color:"red"}}>***</span> <span style={{fontWeight:"bold"}}>Important:</span> - Providing accurate information on above will enable to issue the clearance certificate within 14 working days.
+                                    <span style={{fontWeight:"bold"}}><span style={{color:"red"}}>***</span> <span style={{fontWeight:"bold"}}>Important:</span> - Providing accurate information on above will enable to issue the clearance certificate within 14 working days.</span>
                                 </li>
                                 <li>
                                 Only a relation in Sri Lanka, whose name has been mentioned in the application which was fulfilled by the applicants in abroad, can be submitted to the office for accepting clearance applications, situated at Olcort Mawatha, Colombo 11.
@@ -93,11 +92,11 @@ const Instructions = () => {
                 </Row>
                 <Row>
                     <Col span={8}>
-
+                        
                     </Col>
                     <Col span={8}>
-
-
+                        
+                        
                     </Col>
                     <Col span={8}>
                         <div style={{textAlign:"right" , marginTop : "20px"}}>
@@ -108,7 +107,7 @@ const Instructions = () => {
             </div>
         </Card>
         </div>
-
+            
         </>
     );
 }
