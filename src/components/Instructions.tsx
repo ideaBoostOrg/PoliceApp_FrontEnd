@@ -17,7 +17,7 @@ const Instructions = () => {
                         <Breadcrumb
                         items={[
                         {
-                            title: 'Home',
+                            title: <a href="/">Home</a>,
                         },
                         {
                             title: 'Clearance Certificate Instructions',

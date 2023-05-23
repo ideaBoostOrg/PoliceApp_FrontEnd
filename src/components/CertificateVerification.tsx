@@ -2,6 +2,7 @@ import React, {FC} from "react";
 import {Breadcrumb, Button, Card, Checkbox, Form, Input} from 'antd';
 import Title from "antd/es/typography/Title";
 import {Col, Row} from "antd/es/grid";
+import {Link} from "react-router-dom";
 
 const onFinish = (values: any) => {
     console.log('Success:', values);
@@ -23,7 +24,7 @@ const CertificateVerification = () => {
                         <Breadcrumb
                             items={[
                                 {
-                                    title: <a href="/">Home</a>,
+                                    title: <Link to="/">Home</Link>,
                                 },
                                 {
                                     title: 'Certificate Verification',

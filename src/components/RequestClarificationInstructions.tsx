@@ -3,6 +3,7 @@ import { Breadcrumb, Button, Col, Row, Typography , Card, Input, Upload, UploadP
 import Title from "antd/es/typography/Title";
 import Header from './Header'
 import { InboxOutlined } from '@ant-design/icons';
+import {Link} from "react-router-dom";
 
 const { Dragger } = Upload;
 const { confirm } = Modal;
@@ -26,6 +27,7 @@ const props: UploadProps = {
       console.log('Dropped files', e.dataTransfer.files);
     },
   };
+
 
 const RequestClarificationInstructions = () => {
     const [active, setActive] = useState(false);
@@ -64,7 +66,7 @@ const RequestClarificationInstructions = () => {
                         <Breadcrumb
                         items={[
                         {
-                            title: 'Home',
+                            title: <Link to="/">Home</Link>,
                         },
                         {
                             title: 'Request for Clarification',
