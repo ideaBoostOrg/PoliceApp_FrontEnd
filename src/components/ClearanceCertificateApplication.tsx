@@ -17,6 +17,7 @@ import {
 } from 'antd';
 import React, { useState } from 'react';
 import Title from "antd/es/typography/Title";
+import { Link } from 'react-router-dom';
 
 const { Option } = Select;
 
@@ -527,9 +528,12 @@ const ClearanceCertificateApplication: React.FC = () => {
                                         </Checkbox>
                                     </Form.Item>
                                     <Form.Item {...tailFormItemLayout}>
+                                        <Link to='/payment'>
                                         <Button type="primary" htmlType="submit" style={{ backgroundColor: '#eeefef', color: 'black', border: '1px solid black' }}>
                                             Submit
                                         </Button>
+                                        </Link>
+                                       
                                     </Form.Item>
                                     <p>You can submit another application for the same country only when your previous application is processed</p>
                                 </Form>

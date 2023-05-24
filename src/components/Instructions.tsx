@@ -2,6 +2,7 @@ import React from "react";
 import { Breadcrumb, Button, Col, Row, Typography , Card } from 'antd';
 import Title from "antd/es/typography/Title";
 import Header from './Header'
+import { Link } from "react-router-dom";
 
 const Instructions = () => {
     return(
@@ -100,7 +101,10 @@ const Instructions = () => {
                     </Col>
                     <Col span={8}>
                         <div style={{textAlign:"right" , marginTop : "20px"}}>
+                            <Link to='/ClearanceCertificateApplication'>
                             <Button style={{backgroundColor:"#1E33EE" , color:"#ffff" , width:"200px", height:"40px" , fontWeight:"bold"}}>Proceed</Button>
+                            </Link>
+                            
                         </div>
                     </Col>
                 </Row>

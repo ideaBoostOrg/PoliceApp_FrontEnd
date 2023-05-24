@@ -15,8 +15,8 @@ const onFinishFailed = (errorInfo: any) => {
 const CertificateVerification = () => {
     return (
         <>
-            <Card title={<Title level={1}>Clearance certificate verification
-            </Title>} bordered={false}
+            <Card title={<h1 className="header">Clearance certificate verification
+            </h1>} bordered={false}
                   style={{width: "60%", marginLeft: "20%", marginTop: "18px"}}>
 
                 <Row>
@@ -27,7 +27,12 @@ const CertificateVerification = () => {
                                     title: <Link to="/">Home</Link>,
                                 },
                                 {
-                                    title: 'Certificate Verification',
+                                    
+                                    title: (
+                                        <span className="breadcrumbCurrent">
+                                            Certificate Verification
+                                        </span>
+                                    ),
                                 },
                             ]}/>
                     </Col>
@@ -43,7 +48,7 @@ const CertificateVerification = () => {
                 <Row>
 
                     <Col span={24}>
-                        <Card style={{backgroundColor:"#f0f0f0",width:"65%",margin:"auto",height:"88%"}}>
+                        <Card style={{border:"none", width:"65%",margin:"auto",height:"88%"}}>
                             <Form
                                 name="basic"
                                 labelCol={{span: 8}}
@@ -55,7 +60,8 @@ const CertificateVerification = () => {
                                 autoComplete="off"
                             >
                                 <Form.Item
-                                    label="NIC No:*"
+                                    label="NIC No:"
+                                    labelAlign="left"
                                     name="NICNo"
                                     rules={[{required: true, message: 'Please input your NIC No!'}]}
                                 >
@@ -63,7 +69,9 @@ const CertificateVerification = () => {
                                 </Form.Item>
 
                                 <Form.Item
-                                    label="Passport No:*"
+                                    label="Passport No:"
+                                    labelAlign="left"
+
                                     name="PassportNo"
                                     rules={[{required: true, message: 'Please input your Passport No!'}]}
                                 >
@@ -71,7 +79,9 @@ const CertificateVerification = () => {
                                 </Form.Item>
 
                                 <Form.Item
-                                    label="Certificate No:*"
+                                    label="Certificate No:"
+                                    labelAlign="left"
+
                                     name="CertificateNo"
                                     rules={[{required: true, message: 'Please input your Certification No!'}]}
                                 >
@@ -80,7 +90,7 @@ const CertificateVerification = () => {
 
 
                                 <Form.Item wrapperCol={{offset: 20, span: 16}}>
-                                    <Button type="primary" htmlType="submit">
+                                    <Button className="card-btn" htmlType="submit">
                                         Submit
                                     </Button>
                                 </Form.Item>

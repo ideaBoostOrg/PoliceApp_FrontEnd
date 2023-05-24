@@ -124,7 +124,10 @@ const RequestClarificationInstructions = () => {
                     <Input style={{width:"100%"}}/>
                 </Col>
                 <Col span={3} style={{marginLeft:"10px"}}>
+                    <Link to='/editApplication'>
                     <Button onClick={handleClick} style={{ backgroundColor: active ? "white" : "blue" , color : active ? "black" : "white"}}>Submit</Button>
+                    </Link>
+                    
                 </Col>
                 <Col span={3}></Col>
             </Row>
