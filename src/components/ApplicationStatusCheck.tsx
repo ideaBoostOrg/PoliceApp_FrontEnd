@@ -13,8 +13,8 @@ const ApplicationStatusCheck = () => {
 
     return(
         <>
-        <Card title={<Title level={1}><span style={{color:"blue"}}>Application Status</span></Title>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
-            <Row style={{marginBottom:"30px"}}>
+        <Card title={<Row><Col><Title level={1}><span style={{color:"blue"}}>Application Status</span></Title></Col></Row>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
+            {/* <Row style={{marginBottom:"30px"}}>
                 <Col span={24}>
                     <div style={{fontSize:"15px"}}>Please enter the Application Reference Number to view status of your application</div>
                 </Col>
@@ -31,6 +31,18 @@ const ApplicationStatusCheck = () => {
                     <Button type="primary" onClick={handleClick} style={{ backgroundColor: active ? "white" : "blue" , color : active ? "black" : "white"}}>Submit</Button>
                 </Col>
                 <Col span={3}></Col>
+            </Row> */}
+
+            <Row gutter={[16, 24]} align="middle">
+            <Col lg={{ span: 4 }} md={{ span: 8 }} sm={{ span: 8 }} xs={{span:8}}>
+                <label htmlFor="myInput">Reference Number:</label>
+            </Col>
+            <Col lg={{ span: 16 }} md={{ span: 16 }} sm={{ span: 16 }} xs={{span:16}}>
+                <Input id="myInput" placeholder="Input Field" />
+            </Col>
+            <Col lg={{ span: 4 }} md={{ span: 4 }} sm={{ span: 4 }} xs={{span:8}}>
+                <Button  onClick={handleClick} type="primary">Submit</Button>
+            </Col>
             </Row>
             
         </Card>

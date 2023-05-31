@@ -113,7 +113,7 @@ const RequestClarificationInstructions = () => {
                         
                     </Col>
                 </Row> */}
-                <Row>
+                {/* <Row>
                 <Col span={2}></Col>
                 <Col span={6}style={{marginRight:"0px"}}>
                     <div style={{fontSize:"18px" , fontWeight:"unset"}}>Application Reference Number: <span style={{color:"red"}}>*</span></div>
@@ -125,6 +125,17 @@ const RequestClarificationInstructions = () => {
                     <Button onClick={handleClick} style={{ backgroundColor: active ? "white" : "blue" , color : active ? "black" : "white"}}>Submit</Button>
                 </Col>
                 <Col span={3}></Col>
+            </Row> */}
+            <Row gutter={[16, 24]} align="middle">
+            <Col lg={{ span: 4 }} md={{ span: 8 }} sm={{ span: 8 }} xs={{span:8}}>
+                <label htmlFor="myInput">Reference Number:</label>
+            </Col>
+            <Col lg={{ span: 16 }} md={{ span: 16 }} sm={{ span: 16 }} xs={{span:16}}>
+                <Input id="myInput" placeholder="Input Field" />
+            </Col>
+            <Col lg={{ span: 4 }} md={{ span: 4 }} sm={{ span: 4 }} xs={{span:8}}>
+                <Button  onClick={handleClick} type="primary">Submit</Button>
+            </Col>
             </Row>
             </div>
         </Card>
