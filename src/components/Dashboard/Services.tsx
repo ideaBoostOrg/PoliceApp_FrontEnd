@@ -8,10 +8,10 @@ const Services: FC = () => {
     <>
       <Card type="inner" className="custom-card">
         <Row>
-          <Col xs={{span:24}} lg={{ span:20}} >
+          <Col xs={24} lg={20}>
             <p>Apply online for clearance certificates.</p>
           </Col>
-          <Col xs={{span:24}} lg={{ span:4}}>
+          <Col xs={24} lg={4}>
             <Link to="/instructions">
               <Button className="card-btn">Apply</Button>
             </Link>
@@ -20,10 +20,10 @@ const Services: FC = () => {
       </Card>
       <Card type="inner" className="custom-card">
         <Row>
-          <Col  xs={{span:24}} lg={{ span:20}}>
+          <Col xs={24} lg={20}>
             <p>View application status.</p>
           </Col>
-          <Col xs={{span:24}} lg={{ span:4}}>
+          <Col xs={24} lg={4}>
             <Link to="/statusCheck">
               <Button className="card-btn">View</Button>
             </Link>
@@ -32,10 +32,10 @@ const Services: FC = () => {
       </Card>
       <Card type="inner" className="custom-card">
         <Row>
-          <Col  xs={{span:24}} lg={{ span:20}}>
+          <Col xs={24} lg={20}>
             <p>Request for clarification.</p>
           </Col>
-          <Col xs={{span:24}} lg={{ span:4}}>
+          <Col xs={24} lg={4}>
             <Link to="/requestClarificationInstructions">
               <Button className="card-btn">Request</Button>
             </Link>
@@ -44,10 +44,10 @@ const Services: FC = () => {
       </Card>
       <Card type="inner" className="custom-card">
         <Row>
-          <Col  xs={{span:24}} lg={{ span:20}}>
+          <Col xs={24} lg={20}>
             <p>Verify an issued clearance certificate</p>
           </Col>
-          <Col xs={{span:24}} lg={{ span:4}}>
+          <Col xs={24} lg={4}>
             <Link to="/certificateVerification">
               <Button className="card-btn">Verify</Button>
             </Link>

@@ -19,6 +19,7 @@
   width: 150px;
   float: right;
   font-size: 15px;
+  
 
 
   &:hover {
@@ -29,6 +30,30 @@
 
   @media (max-width: $sm) {
     margin-top: .5em !important;
+    margin-right: 30%;
+    width: 100px;
+
   }
 }
 
+.dashboard-header {
+  margin-left: 15%;
+}
+
+.dashboard-card {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    margin-left: 5%;
+  }
+
+  .dashboard-card {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+  }
+}

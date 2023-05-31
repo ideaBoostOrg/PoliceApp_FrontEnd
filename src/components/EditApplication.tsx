@@ -1,4 +1,6 @@
 import '../css/ClearanceCertificateApplication.scss'
+import { Link } from "react-router-dom";
+
 import {
     AutoComplete,
     Button,
@@ -119,20 +121,20 @@ const EditApplication: React.FC = () => {
     return (
         <>
             <div style={{ backgroundColor: "#F5F5F5" }}>
-                <Card title={<Title level={1}>Edit Application</Title>} bordered={false} style={{ width: "70%", marginLeft: "15%", marginTop: "18px" }}>
+                <Card title={<h1 className="header">Edit Application</h1>} bordered={false} style={{ width: "70%", marginLeft: "15%", marginTop: "18px" }}>
                     <div>
                         <Row>
                             <Col span={18}>
                                 <Breadcrumb
                                     items={[
                                         {
-                                            title: 'Home',
+                                            title: <Link to="/">Home</Link>,
                                         },
                                         {
-                                            title: 'Request for clarification',
+                                            title: <Link to="/requestClarificationInstructions">Request for clarification</Link>,
                                         },
                                         {
-                                            title: 'Edit application',
+                                            title:<span className="breadcrumbCurrent">Edit application</span> ,
                                         },
                                     ]} />
                             </Col>

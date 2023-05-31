@@ -13,7 +13,7 @@ const ApplicationStatusCheck = () => {
 
     return(
         <>
-        <Card title={<Title level={1}><span style={{color:"blue"}}>Application Status</span></Title>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
+        <Card title={<h1 className="header">Application Status</h1>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
             <Row style={{marginBottom:"30px"}}>
                 <Col span={24}>
                     <div style={{fontSize:"15px"}}>Please enter the Application Reference Number to view status of your application</div>

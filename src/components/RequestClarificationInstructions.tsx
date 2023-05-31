@@ -56,7 +56,7 @@ const RequestClarificationInstructions = () => {
     return(
         <>
         <div style={{backgroundColor:"#F5F5F5"}}>
-        <Card title={<Title level={1}><span style={{color:"blue"}}>Instructions</span></Title>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
+        <Card title={<h1 className="header">Instructions</h1>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
             <div>
                 {/* <Row>
                     <Col span={24}><Title level={1}>Instructions</Title></Col>
@@ -69,7 +69,7 @@ const RequestClarificationInstructions = () => {
                             title: <Link to="/">Home</Link>,
                         },
                         {
-                            title: 'Request for Clarification',
+                            title:<span className="breadcrumbCurrent">Request for Clarification</span> ,
                         },
                         ]}/>
                     </Col>

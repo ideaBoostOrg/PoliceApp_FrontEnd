@@ -120,20 +120,20 @@ const ClearanceCertificateApplication: React.FC = () => {
     return (
         <>
             <div style={{ backgroundColor: "#F5F5F5" }}>
-                <Card title={<Title level={1}>Application</Title>} bordered={false} style={{ width: "70%", marginLeft: "15%", marginTop: "18px" }}>
+                <Card title={<h1 className="header">Application</h1>} bordered={false} style={{ width: "70%", marginLeft: "15%", marginTop: "18px" }}>
                     <div>
                         <Row>
                             <Col span={18}>
                                 <Breadcrumb
                                     items={[
                                         {
-                                            title: 'Home',
+                                            title: <Link to="/">Home</Link>,
                                         },
                                         {
-                                            title: 'Clearance certificate instructions',
+                                            title: <Link to="/instructions">Clearance certificate instructions</Link> ,
                                         },
                                         {
-                                            title: 'Clearance certificate application',
+                                            title:<span className="breadcrumbCurrent">Clearance certificate application</span>  ,
                                         },
                                     ]} />
                             </Col>
