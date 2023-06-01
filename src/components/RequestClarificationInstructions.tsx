@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Breadcrumb, Button, Col, Row, Typography , Card, Input, Upload, UploadProps, message, DatePicker, Modal } from 'antd';
+import { Breadcrumb, Button, Col, Row, Typography , Card, Input, Upload, UploadProps, message, DatePicker, Modal, Form } from 'antd';
 import Title from "antd/es/typography/Title";
 import Header from './Header'
 import { InboxOutlined } from '@ant-design/icons';
@@ -115,22 +115,36 @@ const RequestClarificationInstructions = () => {
                         
                     </Col>
                 </Row> */}
-                <Row>
-                <Col span={2}></Col>
-                <Col span={6}style={{marginRight:"0px"}}>
-                    <div style={{fontSize:"18px" , fontWeight:"unset"}}>Application Reference Number: <span style={{color:"red"}}>*</span></div>
-                </Col>
-                <Col span={10}>
-                    <Input style={{width:"100%"}}/>
-                </Col>
-                <Col span={3} style={{marginLeft:"10px"}}>
-                    <Link to='/editApplication'>
-                    <Button onClick={handleClick} style={{ backgroundColor: active ? "white" : "blue" , color : active ? "black" : "white"}}>Submit</Button>
-                    </Link>
-                    
-                </Col>
-                <Col span={3}></Col>
-            </Row>
+                <Row justify="center">
+                    <Col xs={{ span: 24 }} sm={{ span: 20 }} md={{ span: 16 }} lg={{ span: 12 }}>
+                        <Card style={{ border: "none" }}>
+                        <Form
+                            name="basic"
+                            layout="horizontal"
+                            labelCol={{ span: 9 }}
+                            wrapperCol={{ span: 15 }}
+                            style={{ maxWidth: 600 }}
+                            initialValues={{ remember: true }}
+                            onFinish={handleClick}
+                            autoComplete="off"
+                        >
+                            <Form.Item
+                            label="Reference No:"
+                            labelAlign="left"
+                            name="ReferenceNo"
+                            rules={[{ required: true, message: 'Please input your Reference Number' }]}
+                            >
+                            <Input />
+                            </Form.Item>
+                            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                            <Button className="card-btn" htmlType="submit">
+                                Submit
+                            </Button>
+                            </Form.Item>
+                        </Form>
+                        </Card>
+                    </Col>
+                </Row>
             </div>
         </Card>
         

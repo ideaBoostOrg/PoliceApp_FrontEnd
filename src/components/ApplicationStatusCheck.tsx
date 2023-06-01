@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useState } from "react";
-import { Breadcrumb, Button, Col, Row, Typography , Card, Input } from 'antd';
+import { Breadcrumb, Button, Col, Row, Typography , Card, Input, Form } from 'antd';
 import Title from "antd/es/typography/Title";
 import Header from './Header'
 
@@ -19,7 +19,7 @@ const ApplicationStatusCheck = () => {
                     <div style={{fontSize:"15px"}}>Please enter the Application Reference Number to view status of your application</div>
                 </Col>
             </Row>
-            <Row>
+            {/* <Row>
                 <Col span={3}></Col>
                 <Col span={5}style={{marginRight:"0px"}}>
                     <div style={{fontSize:"18px" , fontWeight:"unset"}}>Application Reference Number: <span style={{color:"red"}}>*</span></div>
@@ -31,6 +31,37 @@ const ApplicationStatusCheck = () => {
                     <Button type="primary" onClick={handleClick} style={{ backgroundColor: active ? "white" : "blue" , color : active ? "black" : "white"}}>Submit</Button>
                 </Col>
                 <Col span={3}></Col>
+            </Row> */}
+
+            <Row justify="center">
+                <Col xs={{ span: 24 }} sm={{ span: 20 }} md={{ span: 16 }} lg={{ span: 12 }}>
+                    <Card style={{ border: "none" }}>
+                    <Form
+                        name="basic"
+                        layout="horizontal"
+                        labelCol={{ span: 9 }}
+                        wrapperCol={{ span: 15 }}
+                        style={{ maxWidth: 600 }}
+                        initialValues={{ remember: true }}
+                        onFinish={handleClick}
+                        autoComplete="off"
+                    >
+                        <Form.Item
+                        label="Reference No:"
+                        labelAlign="left"
+                        name="ReferenceN"
+                        rules={[{ required: true, message: 'Please input your Reference Number' }]}
+                        >
+                            <Input />
+                        </Form.Item>
+                        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                            <Button className="card-btn" htmlType="submit">
+                                Submit
+                            </Button>
+                        </Form.Item>
+                    </Form>
+                    </Card>
+                </Col>
             </Row>
             
         </Card>

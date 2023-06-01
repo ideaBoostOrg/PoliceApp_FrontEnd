@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Instructions = () => {
     return(
         <>
-        <div style={{backgroundColor:"#F5F5F5"}}>
+
         <Card title={ <h1 className="header">Instructions</h1>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
             <div>
                 {/* <Row>
@@ -99,15 +99,13 @@ const Instructions = () => {
                     <Col span={8}>
                         <div style={{textAlign:"right" , marginTop : "20px"}}>
                             <Link to='/ClearanceCertificateApplication'>
-                            <Button style={{backgroundColor:"#1E33EE" , color:"#ffff" , width:"200px", height:"40px" , fontWeight:"bold"}}>Proceed</Button>
+                                <Button  className="card-btn">Proceed</Button>
                             </Link>
-                            
                         </div>
                     </Col>
                 </Row>
             </div>
         </Card>
-        </div>
             
         </>
     );
