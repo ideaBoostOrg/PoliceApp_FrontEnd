@@ -122,7 +122,7 @@ const EditApplication: React.FC = () => {
                 <Card title={<Title level={1}>Edit Application</Title>} bordered={false} style={{ width: "70%", marginLeft: "15%", marginTop: "18px" }}>
                     <div>
                         <Row>
-                            <Col span={18}>
+                            <Col lg={{span: 18}} sm={{span: 24}}>
                                 <Breadcrumb
                                     items={[
                                         {
@@ -136,7 +136,7 @@ const EditApplication: React.FC = () => {
                                         },
                                     ]} />
                             </Col>
-                            <Col span={6} style={{alignItems:'end'}}>
+                            <Col lg={{span: 6}} sm={{span: 24}} style={{alignItems:'end'}}>
                                 <p>
                                     Maneth Wijethunga | <span>Log Out</span>
                                 </p>
@@ -218,7 +218,7 @@ const EditApplication: React.FC = () => {
 
 
                                     <Row>
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                             <Form.Item
                                                 name="citizenship"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Citizen of Sri Lanka?</span>}
@@ -232,7 +232,7 @@ const EditApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
 
                                             {showOtherDropdown && (
                                                 <Form.Item
@@ -247,7 +247,7 @@ const EditApplication: React.FC = () => {
 
 
                                     <Row>
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                             <Form.Item
                                                 name="bitrthdate"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Date Of Birth</span>}
@@ -262,7 +262,7 @@ const EditApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                             <Form.Item
                                                 name="age"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Age in years</span>}
@@ -300,7 +300,7 @@ const EditApplication: React.FC = () => {
                                     />
 
                                     <Row>
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                             <Form.Item
                                                 name="refNum"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Reference No</span>}
@@ -315,7 +315,7 @@ const EditApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                         </Col>
                                     </Row>
 
@@ -327,7 +327,7 @@ const EditApplication: React.FC = () => {
 
 
                                     <Row>
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                             <Form.Item
                                                 name="nic"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>NIC No</span>}
@@ -343,7 +343,7 @@ const EditApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                             <Form.Item
                                                 name="confirmNic"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Confirm NIC No</span>}
@@ -368,7 +368,7 @@ const EditApplication: React.FC = () => {
 
 
                                     <Row>
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                             <Form.Item
                                                 name="passport"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Passport No</span>}
@@ -384,7 +384,7 @@ const EditApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                             <Form.Item
                                                 name="confirmPassport"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Confirm Passport No</span>}
@@ -411,7 +411,7 @@ const EditApplication: React.FC = () => {
 
 
                                     <Row>
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                             <Form.Item
                                                 name="newNic"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>New NIC No</span>}
@@ -426,7 +426,7 @@ const EditApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col span={12}>
+                                        <Col lg={{span: 12}} sm={{span: 24}}>
                                             <Form.Item
                                                 name="confirmNewNic"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Confirm New NIC No</span>}
@@ -496,7 +496,7 @@ const EditApplication: React.FC = () => {
 
                                     <Form.Item label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Captcha</span>} extra="We must make sure that your are a human.">
                                         <Row gutter={8}>
-                                            <Col span={12}>
+                                            <Col lg={{span: 12}} sm={{span: 24}}>
                                                 <Form.Item
                                                     name="captcha"
                                                     noStyle
