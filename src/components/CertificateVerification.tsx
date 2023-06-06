@@ -33,7 +33,6 @@ const CertificateVerification: FC = () => {
 
         <Row justify="center">
           <Col xs={{ span: 24 }} sm={{ span: 20 }} md={{ span: 16 }} lg={{ span: 12 }}>
-            <Card style={{ border: "none" }}>
               <Form
                 name="basic"
                 labelCol={{ span: 8 }}
@@ -71,13 +70,14 @@ const CertificateVerification: FC = () => {
                   <Input />
                 </Form.Item>
 
-                <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                  <Button className="card-btn" htmlType="submit">
-                    Submit
-                  </Button>
-                </Form.Item>
+                <Row justify="end">
+                    <Col xs={6} sm={4} md={4} lg={6} xl={6}>
+                        <div className="submit-container">
+                            <Button type="primary" htmlType="submit" className="submit-btn" block>Submit</Button>        
+                        </div>
+                    </Col>
+                </Row>
               </Form>
-            </Card>
           </Col>
         </Row>
       </Card>
