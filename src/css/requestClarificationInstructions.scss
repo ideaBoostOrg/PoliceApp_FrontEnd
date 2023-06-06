@@ -1,0 +1,55 @@
+.breadcrumbCurrentStatus{
+    margin-bottom: 10px;
+    color:#0e49e1;
+}
+  
+@media screen and (max-width: 576px) {
+    .instruction-text{
+      font-size: 13px;
+    }
+    .header {
+        font-size: 22px;
+      }
+    .submit-container {
+        display: flex;
+        justify-content:center;
+      }
+      .submit-btn{
+        width:10%
+    } 
+        
+  }
+  
+  @media screen and (min-width: 577px) and (max-width: 992px) {
+    .header {
+      font-size: 26px;
+    }
+    .submit-container {
+        display: flex;
+        justify-content:center;
+      }
+      .submit-btn{
+        width:10%
+    } 
+    .instruction-text{
+        font-size: 14px;
+      }
+  }
+  
+  @media screen and (min-width: 1200px){
+    .instruction-text{
+      font-size: 15px;
+    }
+    .header {
+      font-size: 26px;
+    }
+    .submit-container {
+        display: flex;
+        justify-content:center;
+      }
+      .submit-btn{
+        width:10%
+    } 
+  }
+ 
+  

@@ -1,19 +1,15 @@
-import React from "react";
-import { Breadcrumb, Button, Col, Row, Typography , Card } from 'antd';
-import Title from "antd/es/typography/Title";
-import Header from './Header'
+import React from 'react';
+import { Row, Col, Card, Button, Breadcrumb } from 'antd';
 import { Link } from "react-router-dom";
+import '../css/instructions.scss'
 
 const Instructions = () => {
-    return(
-        <>
-
-        <Card title={ <h1 className="header">Instructions</h1>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
-            <div>
-                {/* <Row>
-                    <Col span={24}><Title level={1}>Instructions</Title></Col>
-                </Row> */}
-                <Row>
+  return (
+    <div>
+      <Card className="dashboard-card" title={<h1 className="header">Instructions</h1>} bordered={false}>
+        <Row>
+          <Col span={24}>
+          <Row>
                     <Col lg={ { span: 12 } } md={ { span: 24 } } sm={ { span: 24 } } xs={{span: 24}}>
                         <Breadcrumb items=
                         {[
@@ -26,6 +22,7 @@ const Instructions = () => {
                 <Row>
                     <Col span={24}>
                         <div style={{lineHeight:"150%" , fontSize:"15px"}}>
+                            <p className="instruction-text">
                             <ul>
                                 <li>
                                     This allows you to apply for clearance certificates.
@@ -85,30 +82,32 @@ const Instructions = () => {
                                     </li>
                                 </ul>
                             </ul>
+                            </p>
                         </div>
                     </Col>
                 </Row>
-                <Row>
-                    <Col span={8}>
+                <Row justify="end">
+                    <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                         
                     </Col>
-                    <Col span={8}>
-                        
+                    <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                         
                     </Col>
-                    <Col span={8}>
-                        <div style={{textAlign:"right" , marginTop : "20px"}}>
+                    <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                        <div className="submit-container">
                             <Link to='/ClearanceCertificateApplication'>
-                                <Button  className="card-btn">Proceed</Button>
-                            </Link>
+                                <Button className="card-btn" htmlType="submit">Proceed</Button>
+                            </Link>            
                         </div>
                     </Col>
                 </Row>
-            </div>
-        </Card>
-            
-        </>
-    );
-}
+          </Col>
+        </Row>
+        
+      </Card>
+    </div>
+  );
+};
 
 export default Instructions;
+
