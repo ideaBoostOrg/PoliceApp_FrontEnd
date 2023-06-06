@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import { Breadcrumb, Button, Col, Row, Typography , Card, Input, Upload, UploadProps, message, DatePicker, Modal, Form } from 'antd';
-import Title from "antd/es/typography/Title";
-import Header from './Header'
+import '../css/requestClarificationInstructions.scss';
+import React, { useState } from 'react';
+import { Card, Row, Col, Form, Input, Button, Breadcrumb, UploadProps, Upload, Modal, message, DatePicker } from 'antd';
+import { Link } from 'react-router-dom';
+import Title from 'antd/es/typography/Title';
 import { InboxOutlined } from '@ant-design/icons';
-import {Link} from "react-router-dom";
 
+const { Item } = Form;
 const { Dragger } = Upload;
 const { confirm } = Modal;
 
@@ -27,7 +28,9 @@ const props: UploadProps = {
       console.log('Dropped files', e.dataTransfer.files);
     },
   };
-
+  const onFinish = (values: any) => {
+    console.log('Form values:', values);
+  };
 
 const RequestClarificationInstructions = () => {
     const [active, setActive] = useState(false);
@@ -39,49 +42,40 @@ const RequestClarificationInstructions = () => {
 
     function showDeleteConfirm(key: any): void {
     confirm({
-        title: 'Are you sure you want to delete this record?',
+        title: 'Are you sure you want to edit these records?',
         okText: 'Yes',
         okType: 'danger',
         cancelText: 'No',
         onOk() {
-          handleDelete(key);
+          handleEdit(key);
         },
       });
     }
 
-    function handleDelete(key: any) {
+    function handleEdit(key: any) {
         console.log("Clicked!!")
     }
 
-    return(
-        <>
-        <div style={{backgroundColor:"#F5F5F5"}}>
-        <Card title={<h1 className="header">Instructions</h1>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
-            <div>
-                {/* <Row>
-                    <Col span={24}><Title level={1}>Instructions</Title></Col>
-                </Row> */}
+  return (
+    <div className="container">
+        <Card className="dashboard-card" title={<h1 className="header">Instructions</h1>} bordered={false}>
+        <Row>
+            <Col lg={ { span: 12 } } md={ { span: 24 } } sm={ { span: 24 } } xs={{span: 24}}>
+                <Breadcrumb className='breadcrumbCurrentStatus' items=
+                {[
+                    { title: <Link to="/">Home</Link> },
+                    { title: <span className="breadcrumbCurrent">Request for Clarification</span> },
+                    ]}
+                />
+            </Col>
+        </Row>
+        <Row>
+        <Col lg={ { span: 24 } } md={ { span: 24 } } sm={ { span: 24 } } xs={{span: 24}}>
+                
                 <Row>
                     <Col span={24}>
-                        <Breadcrumb
-                        items={[
-                        {
-                            title: <Link to="/">Home</Link>,
-                        },
-                        {
-                            title:<span className="breadcrumbCurrent">Request for Clarification</span> ,
-                        },
-                        ]}/>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col span={24}>
-                        <div style={{fontSize:"15px" , margin:"10px 0px 10px 0px"}}>In order to update following information please enter your Application Reference Number:</div>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col span={24}>
-                        <div style={{lineHeight:"150%" , fontSize:"15px"}}>
+                        <p className='instruction-text'>
+                        <div>
                             <ul>
                                 <li>
                                     Re submit NIC copy
@@ -99,56 +93,26 @@ const RequestClarificationInstructions = () => {
                             
                             <br/>
                         </div>
+                        </p>
                     </Col>
                 </Row>
-                {/* <Row>
-                    <Col span={8}>
-                        
-                    </Col>
-                    <Col span={8}>
-                        <div style={{textAlign:"center" , marginTop : "20px"}}>
-                        <Button style={{backgroundColor:"#1E33EE" , color:"#ffff" , width:"200px", height:"40px" , fontWeight:"bold"}}>Proceed</Button>
+                
+            </Col>
+        </Row>
+            <Form onFinish={onFinish}>
+              <Item label="Reference Number" name="reference" rules={[{ required: true, message: 'Please enter the reference number' }]}>
+                <Input placeholder="Enter reference number" />
+              </Item>
+            </Form>
+            <Row justify="center">
+                    <Col xs={8} sm={8} md={8} lg={6} xl={4}>
+                        <div className="submit-container">
+                            <Button onClick={handleClick} type="primary" htmlType="submit" className="submit-btn" block>Submit</Button>        
                         </div>
-                        
-                    </Col>
-                    <Col span={8}>
-                        
-                    </Col>
-                </Row> */}
-                <Row justify="center">
-                    <Col xs={{ span: 24 }} sm={{ span: 20 }} md={{ span: 16 }} lg={{ span: 12 }}>
-                        <Card style={{ border: "none" }}>
-                        <Form
-                            name="basic"
-                            layout="horizontal"
-                            labelCol={{ span: 9 }}
-                            wrapperCol={{ span: 15 }}
-                            style={{ maxWidth: 600 }}
-                            initialValues={{ remember: true }}
-                            onFinish={handleClick}
-                            autoComplete="off"
-                        >
-                            <Form.Item
-                            label="Reference No:"
-                            labelAlign="left"
-                            name="ReferenceNo"
-                            rules={[{ required: true, message: 'Please input your Reference Number' }]}
-                            >
-                            <Input />
-                            </Form.Item>
-                            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                            <Button className="card-btn" htmlType="submit">
-                                Submit
-                            </Button>
-                            </Form.Item>
-                        </Form>
-                        </Card>
                     </Col>
                 </Row>
-            </div>
-        </Card>
-        
-        {active === true ? (
+          </Card>
+          {active === true ? (
             <div id="result-card" style={{display:"flex" , marginTop : "30px"}}>
                 <Card title={<Title level={4}>Update Request</Title>} bordered={false} style={{width: "70%",marginLeft:"15%"}}>
                     <Row style={{marginBottom:"20px"}}>
@@ -220,14 +184,13 @@ const RequestClarificationInstructions = () => {
         )
         
         }
-
-
-        </div>
-        
-            
-        </>
-    );
-}
+    </div>
+  );
+};
 
 export default RequestClarificationInstructions;
+
+
+
+
 
