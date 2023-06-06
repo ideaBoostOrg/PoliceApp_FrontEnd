@@ -1,34 +1,28 @@
-import React from "react";
-import { Breadcrumb, Button, Col, Row, Typography , Card } from 'antd';
-import Title from "antd/es/typography/Title";
-import Header from './header'
+import React from 'react';
+import { Row, Col, Card, Button, Breadcrumb } from 'antd';
+import { Link } from "react-router-dom";
+import '../css/instructions.scss'
 
 const Instructions = () => {
-    return(
-        <>
-        <Header/>
-        <div style={{backgroundColor:"#F5F5F5"}}>
-        <Card title={<Title level={1}>Instructions</Title>} bordered={false} style={{ width: "70%" , marginLeft:"15%" , marginTop:"18px"}}>
-            <div>
-                {/* <Row>
-                    <Col span={24}><Title level={1}>Instructions</Title></Col>
-                </Row> */}
-                <Row>
+  return (
+    <div>
+      <Card className="dashboard-card" title={<h1 className="header">Instructions</h1>} bordered={false}>
+        <Row>
+          <Col span={24}>
+          <Row>
                     <Col lg={ { span: 12 } } md={ { span: 24 } } sm={ { span: 24 } } xs={{span: 24}}>
-                        <Breadcrumb
-                        items={[
-                        {
-                            title: 'Home',
-                        },
-                        {
-                            title: 'Clearance Certificate Instructions',
-                        },
-                        ]}/>
+                        <Breadcrumb items=
+                        {[
+                            { title: <Link to="/">Home</Link> },
+                            { title: <span className="breadcrumbCurrent">Clearance Certificate Instructions</span> },
+                          ]}
+                        />
                     </Col>
                 </Row>
                 <Row>
                     <Col span={24}>
                         <div style={{lineHeight:"150%" , fontSize:"15px"}}>
+                            <p className="instruction-text">
                             <ul>
                                 <li>
                                     This allows you to apply for clearance certificates.
@@ -67,7 +61,7 @@ const Instructions = () => {
                                     </li>
                                 </ul>
                                 <li>
-                                    <span style={{color:"red"}}>***</span> <span style={{fontWeight:"bold"}}>Important:</span> - Providing accurate information on above will enable to issue the clearance certificate within 14 working days.
+                                    <span style={{fontWeight:"bold"}}><span style={{color:"red"}}>***</span> <span style={{fontWeight:"bold"}}>Important:</span> - Providing accurate information on above will enable to issue the clearance certificate within 14 working days.</span>
                                 </li>
                                 <li>
                                 Only a relation in Sri Lanka, whose name has been mentioned in the application which was fulfilled by the applicants in abroad, can be submitted to the office for accepting clearance applications, situated at Olcort Mawatha, Colombo 11.
@@ -88,29 +82,32 @@ const Instructions = () => {
                                     </li>
                                 </ul>
                             </ul>
+                            </p>
                         </div>
                     </Col>
                 </Row>
-                <Row>
-                    <Col span={8}>
+                <Row justify="end">
+                    <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                         
                     </Col>
-                    <Col span={8}>
-                        
+                    <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                         
                     </Col>
-                    <Col span={8}>
-                        <div style={{textAlign:"right" , marginTop : "20px"}}>
-                            <Button style={{backgroundColor:"#1E33EE" , color:"#ffff" , width:"200px", height:"40px" , fontWeight:"bold"}}>Proceed</Button>
+                    <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                        <div className="submit-container">
+                            <Link to='/ClearanceCertificateApplication'>
+                                <Button className="card-btn" htmlType="submit">Proceed</Button>
+                            </Link>            
                         </div>
                     </Col>
                 </Row>
-            </div>
-        </Card>
-        </div>
-            
-        </>
-    );
-}
+          </Col>
+        </Row>
+        
+      </Card>
+    </div>
+  );
+};
 
 export default Instructions;
+
