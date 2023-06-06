@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
 import { Link } from "react-router-dom";
+import '../../css/home.scss';
 const { Title } = Typography;
 
 const Services: FC = () => {

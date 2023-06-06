@@ -105,7 +105,7 @@ const RequestClarificationInstructions = () => {
               </Item>
             </Form>
             <Row justify="center">
-                    <Col xs={8} sm={8} md={8} lg={6} xl={4}>
+                    <Col xs={6} sm={4} md={4} lg={3} xl={3}>
                         <div className="submit-container">
                             <Button onClick={handleClick} type="primary" htmlType="submit" className="submit-btn" block>Submit</Button>        
                         </div>

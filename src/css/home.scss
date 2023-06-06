@@ -1,0 +1,33 @@
+@media screen and (max-width: 576px) {
+    .instruction-text{
+      font-size: 14px;
+    }
+    .home-header{
+        font-size: 20px;
+    }
+    
+      
+        
+  }
+  
+  @media screen and (min-width: 577px) and (max-width: 992px) {
+    .instruction-text{
+      font-size: 15px;
+    }
+    .home-header{
+        font-size: 21px;
+    }
+    
+    
+      
+  }
+  @media screen and (min-width: 1200px){
+    .instruction-text{
+      font-size: 16px;
+    }
+    .home-header{
+        font-size: 22px;
+    }
+    
+    
+  }

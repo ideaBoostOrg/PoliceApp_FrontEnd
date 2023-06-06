@@ -13,10 +13,10 @@
     .submit-container {
         display: flex;
         justify-content:center;
+        align-items: 'center';
+        height: '100%';
       }
-      .submit-btn{
-        width:10%
-    } 
+      
         
   }
   
@@ -30,10 +30,10 @@
     .submit-container {
         display: flex;
         justify-content:center;
+        align-items: 'center';
+        height: '100%';
       }
-      .submit-btn{
-        width:10%
-    } 
+      
   }
   @media screen and (min-width: 1200px){
     .instruction-text{
@@ -45,10 +45,9 @@
     .submit-container {
         display: flex;
         justify-content:center;
+        align-items: 'center';
       }
-      .submit-btn{
-        width:10%
-    } 
+      
   }
  
  
