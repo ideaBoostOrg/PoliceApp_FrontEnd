@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card, Row, Col, Form, Input, Button, Breadcrumb, UploadProps, Upload, Modal, message, DatePicker } from 'antd';
 import { Link } from 'react-router-dom';
 import Title from 'antd/es/typography/Title';
-import { InboxOutlined } from '@ant-design/icons';
+import { UploadOutlined } from '@ant-design/icons';
 
 const { Item } = Form;
 const { Dragger } = Upload;
@@ -34,15 +34,30 @@ const props: UploadProps = {
 
 const RequestClarificationInstructions = () => {
     const [active, setActive] = useState(false);
+    const [inputValue, setInputValue] = useState('');
+
+    const handleInputChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+        setInputValue(event.target.value);
+      };
+     
+      const validateInput = () => {
+        if (inputValue) {
+            //database operations
+            console.log('Input value:', inputValue);
+          } else {
+            alert('Please enter a value');
+          }
+      }  
 
     const handleClick = () => {
+        validateInput()
         console.log(active)
         setActive(!active);
     }
 
     function showDeleteConfirm(key: any): void {
     confirm({
-        title: 'Are you sure you want to edit these records?',
+        title: 'Are you sure you want to Edit the modifiied records?',
         okText: 'Yes',
         okType: 'danger',
         cancelText: 'No',
@@ -101,7 +116,7 @@ const RequestClarificationInstructions = () => {
         </Row>
             <Form onFinish={onFinish}>
               <Item label="Reference Number" name="reference" rules={[{ required: true, message: 'Please enter the reference number' }]}>
-                <Input placeholder="Enter reference number" />
+                <Input value={inputValue} onChange={handleInputChange} placeholder="Enter reference number"  />
               </Item>
             </Form>
             <Row justify="center">
@@ -112,64 +127,75 @@ const RequestClarificationInstructions = () => {
                     </Col>
                 </Row>
           </Card>
-          {active === true ? (
+
+
+        {active === true && inputValue ?  (
+            
             <div id="result-card" style={{display:"flex" , marginTop : "30px"}}>
-                <Card title={<Title level={4}>Update Request</Title>} bordered={false} style={{width: "70%",marginLeft:"15%"}}>
-                    <Row style={{marginBottom:"20px"}}>
-                        <Col span={24}>
-                            <Dragger {...props}>
-                                <p className="ant-upload-drag-icon">
-                                    <InboxOutlined />
-                                </p>
-                                <p className="ant-upload-text">Click or drag file to this area to upload(NIC Copy)</p>
-                                <p className="ant-upload-hint">
-                                Re submit NIC copy
-                                    
-                                </p>
-                            </Dragger>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col span={24}>
-                            <Dragger {...props}>
-                                <p className="ant-upload-drag-icon">
-                                    <InboxOutlined />
-                                </p>
-                                <p className="ant-upload-text">Click or drag file to this area to upload(Passport Copy)</p>
-                                <p className="ant-upload-hint">
-                                Re submit passport copy
-                                    
-                                </p>
-                            </Dragger>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col span={2}>
-                            <Title level={5}><p>Verify Name : </p></Title>
-                        </Col>
-                        <Col span={22}>
-                            <Input style={{marginTop:"25px"}}/>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col span={2}>
-                            <Title level={5}><p>Date of Birth : </p></Title>
-                        </Col>
-                        <Col span={22}>
-                            <DatePicker style={{marginTop:"22px"}} size="middle"/>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col span={8}>
+                <Card className="dashboard-card"  title={<Title level={4}>Update Request</Title>} bordered={false}>
+                    <Row gutter={[16, 16]}>
+                        <Col xs={24} sm={24} md={6}>
                             
+                            <Card style={{height:'100%'}} bordered={false} title={<Title level={5} ><p className='bottom-card-text'>Resubmit NIC</p></Title>}>
+                                <p className='bottom-card-text'>
+                                    <Upload {...props}>
+                                        <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                                    </Upload>
+                                </p>
+                            </Card>
                         </Col>
-                        <Col span={8}>
+                        <Col xs={24} sm={24} md={6}>
                             
+                            <Card style={{height:'100%'}} bordered={false} title={<Title level={5} ><p className='bottom-card-text'>Resubmit Passport</p></Title>}>
+                                <p className='bottom-card-text'>
+                                <Upload {...props}>
+                                    <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                                </Upload>
+                                
+                                </p>
+                            </Card>
                         </Col>
-                        <Col span={8} style={{display: "flex" , justifyContent:"right",alignContent:"end"}}>
-                            <Button type="primary" onClick={showDeleteConfirm}>Submit</Button>
+                        <Col xs={24} sm={24} md={6}>
+                            
+                            <Card  bordered={false}  title={<Title level={5} ><p className='bottom-card-text'>Verify Name</p></Title>}> 
+                                <p className='bottom-card-text'>
+                                <Form onFinish={onFinish}>
+                                    <Item name="name" rules={[{message: 'Please enter the Updated Name' }]}>
+                                        <Input  placeholder="Enter the Updated name"  />
+                                    </Item>
+                                </Form>
+                                </p>
+                            </Card>
                         </Col>
+                        <Col xs={24} sm={24} md={6}>
+                            
+                            <Card  bordered={false}  title={<Title level={5} ><p className='bottom-card-text'>Verify DOB</p></Title>}>
+                                 <p className='bottom-card-text'>
+                                    <Form onFinish={onFinish}>
+                                        <Item  name="dob" >
+                                            <DatePicker style={{width:'100%'}} size="middle"/>
+                                        </Item>
+                                    </Form>
+                                 </p>
+                            </Card>
+                        </Col>
+                        
+                            <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                            
+                            </Col>
+                            <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                                
+                            </Col>
+                                <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                                <div className="submit-container">
+                                    
+                                    <Button onClick={showDeleteConfirm} className="card-btn" htmlType="submit">Submit</Button>
+                                               
+                                </div>
+                            </Col>
+                        
                     </Row>
+                    
                     
                     
                     
