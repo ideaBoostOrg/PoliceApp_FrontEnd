@@ -16,6 +16,9 @@
         align-items: 'center';
         height: '100%';
       }
+      .bottom-card-text{
+        font-size: 14px;
+      }
       
         
   }
@@ -33,6 +36,9 @@
         align-items: 'center';
         height: '100%';
       }
+      .bottom-card-text{
+        font-size: 15px;
+      }
       
   }
   @media screen and (min-width: 1200px){
@@ -47,7 +53,15 @@
         justify-content:center;
         align-items: 'center';
       }
+
       
+  }
+
+  .bottom-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
  
  
