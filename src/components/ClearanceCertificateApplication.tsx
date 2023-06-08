@@ -1,4 +1,4 @@
-import '../css/ClearanceCertificateApplication.scss'
+
 import {
     Button,
     Card,
@@ -12,7 +12,7 @@ import {
     Select,
 } from 'antd';
 import React, { useState } from 'react';
-import Title from "antd/es/typography/Title";
+import { Link } from 'react-router-dom';
 
 const { Option } = Select;
 
@@ -115,20 +115,20 @@ const ClearanceCertificateApplication: React.FC = () => {
     return (
         <>
             <div style={{ backgroundColor: "#F5F5F5" }}>
-                <Card title={<Title level={1}>Application</Title>} bordered={false} style={{ width: "70%", marginLeft: "15%", marginTop: "18px" }}>
+                <Card className='dashboard-card' title={<h1 className="header">Application</h1>} bordered={false}>
                     <div>
                         <Row>
                             <Col lg={{ span: 24 }} sm={{ span: 24 }}>
                                 <Breadcrumb
                                     items={[
                                         {
-                                            title: 'Home',
+                                            title: <Link to="/">Home</Link>,
                                         },
                                         {
-                                            title: 'Clearance certificate instructions',
+                                            title: <Link to="/instructions">Clearance certificate instructions</Link> ,
                                         },
                                         {
-                                            title: 'Clearance certificate application',
+                                            title:<span className="breadcrumbCurrent">Clearance certificate application</span>  ,
                                         },
                                     ]} />
                             </Col>
@@ -153,7 +153,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                             </Col>
                         </Row>
                         <Row>
-                            <Col span={24}>
+                            <Col span={24} className="Form-content">
                                 <Form
                                     className='application-form'
                                     {...formItemLayout}
@@ -177,7 +177,7 @@ const ClearanceCertificateApplication: React.FC = () => {
 
                                     {showOtherDropdown && (
                                         <Form.Item
-                                            name="age"
+                                            name="pre-ref-no"
                                             label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Previous Application Reference No</span>}
                                             rules={[
                                                 {
@@ -187,10 +187,10 @@ const ClearanceCertificateApplication: React.FC = () => {
                                         >
                                             <Row>
                                                 <Col lg={{ span: 10 }} sm={{ span: 24 }}>
-                                                    <Input style={{ width: "100%" }} />
+                                                    <Input className='ref-number' style={{ width: "100%" }} />
                                                 </Col>
                                                 <Col lg={{ span: 3 }} sm={{ span: 24 }} style={{ marginLeft: "10px" }} >
-                                                    <Button type="primary" htmlType="submit" style={{ backgroundColor: '#eeefef', color: 'black', border: '1px solid black' }}>
+                                                    <Button type="primary" className='load-btn' htmlType="submit" >
                                                         Load
                                                     </Button>
                                                 </Col>
@@ -223,11 +223,12 @@ const ClearanceCertificateApplication: React.FC = () => {
                                     <Row>
                                         <Col lg={{ span: 12 }} sm={{ span: 24 }}>
                                             <Form.Item
+                                            className='citizen'
                                                 name="citizenship"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Citizen of Sri Lanka?</span>}
                                                 rules={[{ required: true, message: 'Please select' }]}
                                             >
-                                                <Select onChange={handleFirstDropdownChange2} placeholder="Please select">
+                                                <Select className='select-one' onChange={handleFirstDropdownChange2} placeholder="Please select">
                                                     <Option value="yes">Yes</Option>
                                                     <Option value="no">No</Option>
                                                 </Select>
@@ -242,7 +243,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                     label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Citizenship obtained date</span>}
                                                     rules={[{ required: true, message: 'Please select' }]}
                                                 >
-                                                    <DatePicker />
+                                                    <DatePicker className='date-picker'/>
                                                 </Form.Item>
                                             )}
                                         </Col>
@@ -260,7 +261,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                         message: 'Please input your birthdate',
                                                     }
                                                 ]}>
-                                                <DatePicker />
+                                                <DatePicker className='date-picker' />
                                             </Form.Item>
                                         </Col>
 
@@ -277,7 +278,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                     { validator: validateNumber }
                                                 ]}
                                             >
-                                                <Input />
+                                                <Input className='age-years' />
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -313,7 +314,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                     }
                                                 ]}
                                             >
-                                                <Input />
+                                                <Input className='age-years'/>
                                             </Form.Item>
                                         </Col>
 
@@ -341,7 +342,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                 ]}
                                             >
 
-                                                <Input />
+                                                <Input className='age-years' />
                                             </Form.Item>
                                         </Col>
 
@@ -364,7 +365,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                         },
                                                     }),
                                                 ]}>
-                                                <Input />
+                                                <Input className='age-years' />
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -382,7 +383,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                     }
                                                 ]}
                                             >
-                                                <Input />
+                                                <Input className='age-years' />
                                             </Form.Item>
                                         </Col>
 
@@ -407,7 +408,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                     }),
                                                 ]}
                                             >
-                                                <Input />
+                                                <Input className='age-years' />
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -424,7 +425,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                     }
                                                 ]}
                                             >
-                                                <Input />
+                                                <Input className='age-years' />
                                             </Form.Item>
                                         </Col>
 
@@ -448,7 +449,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                     }),
                                                 ]}
                                             >
-                                                <Input />
+                                                <Input className='age-years' />
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -458,7 +459,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                         label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Country</span>}
                                         rules={[{ required: true, message: 'Please select country' }]}
                                     >
-                                        <Select placeholder="select country">
+                                        <Select placeholder="Select country">
                                             {countries.map((country, index) => (
                                                 <Option key={index} value={country}>
                                                     {country}
@@ -509,7 +510,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                                 </Form.Item>
                                             </Col>
                                             <Col lg={{ span: 12 }} sm={{ span: 24 }}>
-                                                <Button>Get captcha</Button>
+                                                <Button className='captcha-btn'>Get captcha</Button>
                                             </Col>
                                         </Row>
                                     </Form.Item>
@@ -529,10 +530,13 @@ const ClearanceCertificateApplication: React.FC = () => {
                                             I have read the <a href="#">agreement</a>
                                         </Checkbox>
                                     </Form.Item>
-                                    <Form.Item {...tailFormItemLayout}>
-                                        <Button type="primary" htmlType="submit">
+                                    <Form.Item {...tailFormItemLayout} style={{paddingRight:'110px'}}>
+                                        <Link to='/payment'>
+                                        <Button type="primary" className='submit-btn' htmlType="submit" >
                                             Submit
                                         </Button>
+                                        </Link>
+                                       
                                     </Form.Item>
                                     <p>You can submit another application for the same country only when your previous application is processed</p>
                                 </Form>
