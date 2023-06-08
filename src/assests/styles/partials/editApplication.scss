@@ -1,0 +1,48 @@
+.application-form {
+    // box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    // border: 1px solid #e0e0e0;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.application {
+    // color: #9797d3;
+    font-size: 35px;
+}
+.submit-btn{
+    height: 35px;
+    width: 100px;
+}
+
+@media (max-width: 768px) {
+    .load-btn {
+        margin-top:10px !important;
+        margin-left: 202px !important;
+    }
+
+    .ref-number{
+        width: 150% !important;
+    }
+    .application-form{
+        padding: 15px;
+    }
+    .dashboard-card{
+        padding: 0 !important;
+    }
+    .date-picker{
+        width: 175% !important;
+    }
+    .select-one{
+        width: 220% !important;
+    }
+    .age-years{
+        width: 150% !important;
+    }
+    .captcha-btn{
+        margin-top: 10px !important;
+    }
+    .submit-btn{
+        margin-left: 80px !important;
+    }
+}
