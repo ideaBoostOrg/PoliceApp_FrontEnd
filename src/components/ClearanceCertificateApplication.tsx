@@ -532,7 +532,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                     </Form.Item>
                                     <Form.Item {...tailFormItemLayout} style={{paddingRight:'110px'}}>
                                         <Link to='/payment'>
-                                        <Button type="primary" className='submit-btn' htmlType="submit" >
+                                        <Button type="primary" className='submit-btn-1' htmlType="submit" >
                                             Submit
                                         </Button>
                                         </Link>
