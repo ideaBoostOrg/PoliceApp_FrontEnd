@@ -19,10 +19,57 @@
   }
 
 
+  .submit-btn-1{
+    height: 35px;
+    width: 100px;
+    border-color: $btn-bg !important;
+    background: $btn-bg !important;
+    color: white !important;
+  padding: .3em 1em 2em 1em !important;
+  font-size: 15px !important;
+
+    &:hover {
+        background: #ffffff !important;
+        border: 1px solid $btn-bg !important;
+        color: $btn-bg !important;
+      }
+}
+
+.load-btn {
+    &:hover {
+        background: #ffffff !important;
+        border: 1px solid $btn-bg !important;
+        color: $btn-bg !important;
+      }
+}
+
+.captcha-btn{
+    border-color: $btn-bg !important;
+    background: $btn-bg !important;
+    color: white !important;
+    &:hover {
+        background: #ffffff !important;
+        border: 1px solid $btn-bg !important;
+        color: $btn-bg !important;
+      }
+}
+
+
+// @media screen and (min-width: 577px) and (max-width: 992px) {
+//     .ref-number{
+//         width: 100% !important;
+//     }
+// }
+
+
+
+
+
+
 @media (max-width: 768px) {
     .load-btn {
         margin-top:10px !important;
-        margin-left: 202px !important;
+        margin-left: 222px !important;
     }
 
     .ref-number{

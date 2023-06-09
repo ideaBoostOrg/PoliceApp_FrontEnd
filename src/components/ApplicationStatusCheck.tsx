@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Card, Row, Col, Form, Input, Button, Breadcrumb, Table} from 'antd';
 import { Link } from 'react-router-dom';
 import Title from 'antd/es/typography/Title';
+import Footer from './Footer';
 
 
 const { Item } = Form;
@@ -71,20 +72,7 @@ const ApplicationStatusCheck = () => {
             
             <div id="result-card" style={{display:"flex" , marginTop : "30px"}}>
                 <Card className="dashboard-card"  title={<Title level={4}>Current Status</Title>} bordered={false}>
-                    {/* <Row gutter={[16, 16]}>
-                        <Col xs={24} sm={24} md={8}>
-                            
-                            <Card   bordered={false} title={<Title level={5} ><p className='bottom-card-text'>Submitted Date</p></Title>}><p className='bottom-card-text'>2023/05/30</p></Card>
-                        </Col>
-                        <Col xs={24} sm={24} md={8}>
-                            
-                            <Card  bordered={false} title={<Title level={5} ><p className='bottom-card-text'>Status</p></Title>}><p className='bottom-card-text'><span style={{color:"red"}}>On Progress</span></p></Card>
-                        </Col>
-                        <Col xs={24} sm={24} md={8}>
-                            
-                            <Card  bordered={false}  title={<Title level={5} ><p className='bottom-card-text'>Reference Number</p></Title>}> <p className='bottom-card-text'> {inputValue}</p></Card>
-                        </Col>
-                    </Row> */}
+                    
                     <Row gutter={[16, 16]}>
                         <Col xs={12} sm={12} md={12} lg={4}>
                             <p className="instruction-text"><b>Reference Number:</b></p>
@@ -141,7 +129,11 @@ const ApplicationStatusCheck = () => {
         )
         
         }
+        <Row>
+                <Footer/>
+            </Row>
     </div>
+    
   );
 };
 

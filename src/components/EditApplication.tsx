@@ -13,6 +13,7 @@ import {
 } from 'antd';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 const { Option } = Select;
 
@@ -557,6 +558,9 @@ const EditApplication: React.FC = () => {
                     </div>
                 </Card>
             </div>
+            <Row>
+                <Footer/>
+            </Row>
 
         </>
     );

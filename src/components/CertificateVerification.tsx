@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { Breadcrumb, Button, Card, Form, Input, Row, Col } from 'antd';
 import { Link } from "react-router-dom";
 import '../css/certificateVerfication.scss'
+import Footer from "./Footer";
 
 const onFinish = (values: any) => {
   console.log('Success:', values);
@@ -82,6 +83,9 @@ const CertificateVerification: FC = () => {
           </Col>
         </Row>
       </Card>
+      <Row>
+                <Footer/>
+            </Row>
     </>
   );
 };

@@ -59,6 +59,14 @@
       
   }
 
+  .submit-btn{
+    &:hover {
+      background: #ffffff !important;
+      border: 1px solid #1677ff !important;
+      color: #1677ff !important;
+    }
+  }
+
   .bottom-card{
     display: flex;
     justify-content: center;

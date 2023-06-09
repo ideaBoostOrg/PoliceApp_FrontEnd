@@ -4,6 +4,7 @@ import { Card, Row, Col, Form, Input, Button, Breadcrumb, UploadProps, Upload, M
 import { Link } from 'react-router-dom';
 import Title from 'antd/es/typography/Title';
 import { UploadOutlined } from '@ant-design/icons';
+import Footer from './Footer';
 
 const { Item } = Form;
 const { Dragger } = Upload;
@@ -316,6 +317,9 @@ const RequestClarificationInstructions = () => {
         )
         
         }
+        <Row>
+                <Footer/>
+            </Row>
     </div>
   );
 };

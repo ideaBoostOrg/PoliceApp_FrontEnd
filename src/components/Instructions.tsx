@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col, Card, Button, Breadcrumb } from 'antd';
 import { Link } from "react-router-dom";
 import '../css/instructions.scss'
+import Footer from "./Footer";
 
 const Instructions = () => {
   return (
@@ -105,6 +106,9 @@ const Instructions = () => {
         </Row>
         
       </Card>
+      <Row>
+                <Footer/>
+            </Row>
     </div>
   );
 };

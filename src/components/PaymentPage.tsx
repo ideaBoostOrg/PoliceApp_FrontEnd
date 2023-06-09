@@ -1,5 +1,7 @@
 import react from 'react';
 import { BrowserRouter as Router, Routes, Route, HashRouter, Link } from "react-router-dom";
+import { Row, Col, Card, Form, Input, Button, Checkbox } from 'antd';
+import Footer from "./Footer";
 
 
 const PaymentPage= () => {
@@ -13,6 +15,9 @@ const PaymentPage= () => {
 
 
             </p>
+            <Row>
+                <Footer/>
+            </Row>
 
 
         </div>

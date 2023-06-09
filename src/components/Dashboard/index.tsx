@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import Services from "./Services";
 import { Card } from "antd";
+import { Row } from "antd";
+import Footer from '../Footer';
 import Title from "antd/es/typography/Title";
 
 const Dashboard: FC = () => {
@@ -14,6 +16,9 @@ const Dashboard: FC = () => {
       <Card title={<h1 className='header'>Our Services</h1>} bordered={false} className="dashboard-card">
         <Services />
       </Card>
+      <Row>
+                <Footer/>
+            </Row>
     </>
   );
 };

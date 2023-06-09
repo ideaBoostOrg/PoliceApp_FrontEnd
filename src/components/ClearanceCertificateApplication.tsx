@@ -15,6 +15,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 
+
 const { Option } = Select;
 
 const nationalities = [
@@ -141,7 +142,6 @@ const ClearanceCertificateApplication: React.FC = () => {
                                     layout="vertical"
                                     labelCol={{ span: 24 }}
                                 >
-
                                     <Form.Item
                                         name="applicationType"
                                         label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Application Type</span>}
@@ -164,10 +164,10 @@ const ClearanceCertificateApplication: React.FC = () => {
                                             ]}
                                         >
                                             <Row>
-                                                <Col lg={{ span: 10 }} sm={{ span: 24 }}>
+                                                <Col lg={{ span: 10 }} sm={{ span: 24 }} xs={24}>
                                                     <Input className='ref-number' style={{ width: "100%" }} />
                                                 </Col>
-                                                <Col lg={{ span: 3 }} sm={{ span: 24 }} style={{ marginLeft: "10px" }} >
+                                                <Col lg={{ span: 3 }} sm={{ span: 24 }} xs={24} style={{ marginLeft: "10px" }} >
                                                     <Button type="primary" className='load-btn' htmlType="submit" >
                                                         Load
                                                     </Button>
@@ -199,8 +199,8 @@ const ClearanceCertificateApplication: React.FC = () => {
                                     </Form.Item>
 
 
-                                    <Row>
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                    <Row gutter={[16, 16]}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
                                             <Form.Item
                                             className='citizen'
                                                 name="citizenship"
@@ -215,7 +215,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
 
                                             {showOtherDropdown && (
                                                 <Form.Item
@@ -229,8 +229,8 @@ const ClearanceCertificateApplication: React.FC = () => {
                                     </Row>
 
 
-                                    <Row>
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                    <Row gutter={[16, 16]}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
                                             <Form.Item
                                                 name="bitrthdate"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Date of Birth</span>}
@@ -245,7 +245,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
                                             <Form.Item
                                                 name="age"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Age in years</span>}
@@ -283,7 +283,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                     />
 
                                     <Row>
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
                                             <Form.Item
                                                 name="refNum"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Reference No</span>}
@@ -309,8 +309,8 @@ const ClearanceCertificateApplication: React.FC = () => {
                                     </Row>
 
 
-                                    <Row>
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                    <Row gutter={[16, 16]}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
                                             <Form.Item
                                                 name="nic"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>NIC No</span>}
@@ -326,7 +326,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
                                             <Form.Item
                                                 name="confirmNic"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Confirm NIC No</span>}
@@ -350,8 +350,8 @@ const ClearanceCertificateApplication: React.FC = () => {
                                     </Row>
 
 
-                                    <Row>
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                    <Row gutter={[16, 16]}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
                                             <Form.Item
                                                 name="passport"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Passport No</span>}
@@ -367,7 +367,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
                                             <Form.Item
                                                 name="confirmPassport"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Confirm Passport No</span>}
@@ -393,8 +393,8 @@ const ClearanceCertificateApplication: React.FC = () => {
                                     </Row>
 
 
-                                    <Row>
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                    <Row gutter={[16, 16]}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
                                             <Form.Item
                                                 name="newNic"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>New NIC No</span>}
@@ -409,7 +409,7 @@ const ClearanceCertificateApplication: React.FC = () => {
                                         </Col>
 
 
-                                        <Col lg={{ span: 12 }} sm={{ span: 24 }}>
+                                        <Col lg={{ span: 12 }} sm={{ span: 24 }} xs={24}>
                                             <Form.Item
                                                 name="confirmNewNic"
                                                 label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Confirm New NIC No</span>}
@@ -479,7 +479,7 @@ const ClearanceCertificateApplication: React.FC = () => {
 
                                     <Form.Item label={<span style={{ fontSize: '12px', fontWeight: 'bold' }}>Captcha</span>} extra="We must make sure that your are a human.">
                                         <Row gutter={8}>
-                                            <Col lg={{ span: 9 }} sm={{ span: 24 }}>
+                                            <Col lg={{ span: 9 }} sm={{ span: 24 }} xs={24}>
                                                 <Form.Item
                                                     name="captcha"
                                                     noStyle
@@ -524,10 +524,11 @@ const ClearanceCertificateApplication: React.FC = () => {
                         </Row>
                     </div>
                 </Card>
-            </div>
-            <Row>
-                {/* <Footer /> */}
+                <Row>
+                <Footer/>
             </Row>
+            </div>
+            
 
         </>
     );
