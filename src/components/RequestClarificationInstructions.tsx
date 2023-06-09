@@ -133,54 +133,62 @@ const RequestClarificationInstructions = () => {
             
             <div id="result-card" style={{display:"flex" , marginTop : "30px"}}>
                 <Card className="dashboard-card"  title={<Title level={4}>Update Request</Title>} bordered={false}>
-                    <Row gutter={[16, 16]}>
-                        <Col xs={24} sm={24} md={6}>
-                            
-                            <Card style={{height:'100%'}} bordered={false} title={<Title level={5} ><p className='bottom-card-text'>Resubmit NIC</p></Title>}>
-                                <p className='bottom-card-text'>
-                                    <Upload {...props}>
-                                        <Button icon={<UploadOutlined />}>Click to Upload</Button>
-                                    </Upload>
-                                </p>
-                            </Card>
+                    
+
+                    {/* <Row gutter={[16, 16]}>
+                        <Col xs={12} sm={12} md={12} lg={4}>
+                            <p className="instruction-text"><b>Resubmit NIC:</b></p>
                         </Col>
-                        <Col xs={24} sm={24} md={6}>
-                            
-                            <Card style={{height:'100%'}} bordered={false} title={<Title level={5} ><p className='bottom-card-text'>Resubmit Passport</p></Title>}>
-                                <p className='bottom-card-text'>
+                        <Col xs={12} sm={12} md={12} lg={8}>
+                            <p className='bottom-card-text'>
+                                <Upload {...props}>
+                                    <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                                </Upload>
+                            </p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={4}>
+                            <p className="instruction-text"><b>Resubmit Passport:</b></p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={8}>
+                            <p className='bottom-card-text'>
                                 <Upload {...props}>
                                     <Button icon={<UploadOutlined />}>Click to Upload</Button>
                                 </Upload>
                                 
-                                </p>
-                            </Card>
+                            </p>
                         </Col>
-                        <Col xs={24} sm={24} md={6}>
-                            
-                            <Card  bordered={false}  title={<Title level={5} ><p className='bottom-card-text'>Verify Name</p></Title>}> 
-                                <p className='bottom-card-text'>
+                        </Row>
+                        <Row gutter={[16, 16]}>
+                        <Col xs={12} sm={12} md={12} lg={4}>
+                            <p className="instruction-text"><b>Verify Name:</b></p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={8}>
+                            <p className='bottom-card-text'>
                                 <Form onFinish={onFinish}>
                                     <Item name="name" rules={[{message: 'Please enter the Updated Name' }]}>
-                                        <Input  placeholder="Enter the Updated name"  />
+                                        <Input  placeholder="Enter the Updated Name"  />
                                     </Item>
                                 </Form>
-                                </p>
-                            </Card>
+                            </p>
                         </Col>
-                        <Col xs={24} sm={24} md={6}>
-                            
-                            <Card  bordered={false}  title={<Title level={5} ><p className='bottom-card-text'>Verify DOB</p></Title>}>
-                                 <p className='bottom-card-text'>
+                        
+                        <Col xs={12} sm={12} md={12} lg={4}>
+                        <p className="instruction-text"><b>Verify DOB:</b></p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={8}>
+                            <p className='bottom-card-text'>
                                     <Form onFinish={onFinish}>
                                         <Item  name="dob" >
                                             <DatePicker style={{width:'100%'}} size="middle"/>
                                         </Item>
                                     </Form>
-                                 </p>
-                            </Card>
+                            </p>
                         </Col>
+                    </Row>
                         
-                            <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                    
+                    <Row>
+                    <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                             
                             </Col>
                             <Col xs={8} sm={8} md={8} lg={8} xl={8}>
@@ -189,12 +197,110 @@ const RequestClarificationInstructions = () => {
                                 <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                                 <div className="submit-container">
                                     
-                                    <Button onClick={showDeleteConfirm} className="card-btn" htmlType="submit">Submit</Button>
+                                    <Button onClick={showDeleteConfirm} className="card-btn" htmlType="submit">Update</Button>
                                                
                                 </div>
                             </Col>
+                    </Row> */}
+
+                    <Form onFinish={onFinish}>
+                        <Row>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                            <Item
+                                label="Verify Name"
+                                name="verifyName"
+                                rules={[{ required: false, message: 'Please enter the Verified Name' }]}
+                            >
+                                <Input placeholder="Verified Name" />
+                            </Item>
+                            </Col>
+                            
+                        </Row>
+                        {/* <Row gutter={[16, 16]} align="middle">
+                            <Col xs={24} sm={24} md={24} lg={24} xl={8}>
+                                <Item
+                                    label="Resubmit NIC"
+                                    name="resbumitNIC"
+                                    rules={[{ required: false}]}
+                                >
+                                     <Upload {...props}>
+                                        <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                                    </Upload>
+                                </Item>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={8}>
+                                <Item
+                                    label="Resubmit Passport"
+                                    name="resbumitPassport"
+                                    rules={[{ required: false}]}
+                                >
+                                     <Upload {...props}>
+                                        <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                                    </Upload>
+                                </Item>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={8}>
+                            <Item
+                                label="DOB"
+                                name="dob"
+                                rules={[{ required: false, message: 'Please enter the DOB' }]}
+                            >
+                                <DatePicker style={{width:'50%'}} size="middle"/>
+                            </Item>
+                            </Col>
+                                
+                        </Row> */}
+
+                        <Row gutter={[96, 16]} align="middle">
+                            <Col xs={24} sm={24} md={24} lg={24} xl={8}>
+                            <Item
+                                    label="Resubmit NIC"
+                                    name="resbumitNIC"
+                                    rules={[{ required: false}]}
+                                >
+                                     <Upload {...props}>
+                                        <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                                    </Upload>
+                                </Item>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={8}>
+                            <Item
+                                    label="Resubmit Passport"
+                                    name="resbumitPassport"
+                                    rules={[{ required: false}]}
+                                >
+                                     <Upload {...props}>
+                                        <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                                    </Upload>
+                                </Item>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={8}>
+                            <Item
+                                label="DOB"
+                                name="dob"
+                                rules={[{ required: false, message: 'Please enter the DOB' }]}
+                            >
+                                <DatePicker style={{width:'70%'}} size="middle"/>
+                            </Item>
+                            </Col>
+                        </Row>
                         
-                    </Row>
+                        <Row>
+                            <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                                    
+                                    </Col>
+                                    <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                                        
+                                    </Col>
+                                        <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                                        <div className="submit-container">
+                                            
+                                            <Button onClick={showDeleteConfirm} className="card-btn" htmlType="submit">Update</Button>
+                                                    
+                                        </div>
+                                    </Col>
+                        </Row>
+                    </Form>
                     
                     
                     
