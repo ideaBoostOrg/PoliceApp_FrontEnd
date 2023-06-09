@@ -1,9 +1,10 @@
 
 import '../css/statusCheck.scss';
 import React, { useState } from 'react';
-import { Card, Row, Col, Form, Input, Button, Breadcrumb } from 'antd';
+import { Card, Row, Col, Form, Input, Button, Breadcrumb, Table} from 'antd';
 import { Link } from 'react-router-dom';
 import Title from 'antd/es/typography/Title';
+
 
 const { Item } = Form;
 
@@ -33,6 +34,7 @@ const ApplicationStatusCheck = () => {
         alert('Please enter a value');
       }
   }
+  
 
   return (
     <div className="container">
@@ -69,7 +71,7 @@ const ApplicationStatusCheck = () => {
             
             <div id="result-card" style={{display:"flex" , marginTop : "30px"}}>
                 <Card className="dashboard-card"  title={<Title level={4}>Current Status</Title>} bordered={false}>
-                    <Row gutter={[16, 16]}>
+                    {/* <Row gutter={[16, 16]}>
                         <Col xs={24} sm={24} md={8}>
                             
                             <Card   bordered={false} title={<Title level={5} ><p className='bottom-card-text'>Submitted Date</p></Title>}><p className='bottom-card-text'>2023/05/30</p></Card>
@@ -82,9 +84,50 @@ const ApplicationStatusCheck = () => {
                             
                             <Card  bordered={false}  title={<Title level={5} ><p className='bottom-card-text'>Reference Number</p></Title>}> <p className='bottom-card-text'> {inputValue}</p></Card>
                         </Col>
+                    </Row> */}
+                    <Row gutter={[16, 16]}>
+                        <Col xs={12} sm={12} md={12} lg={4}>
+                            <p className="instruction-text"><b>Reference Number:</b></p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={4}>
+                            <p className="instruction-text">{inputValue}</p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={4}>
+                            <p className="instruction-text"><b>Submitted Date:</b></p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={4}>
+                            <p className="instruction-text">2023/03/31</p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={4}>
+                            <p className="instruction-text"><b>Status:</b></p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={4}>
+                            <p className="instruction-text"><span style={{color:"red"}}>On Progress</span></p>
+                        </Col>
+                        
                     </Row>
-                    
-                    
+
+                    {/* <Row gutter={[16, 16]} justify="center">
+                        <Col xs={12} sm={12} md={12} lg={5}>
+                            <p style={{ textAlign: 'right' }} className="instruction-text"><b>Reference Number:</b></p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={3}>
+                            <p  className="instruction-text">{inputValue}</p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={5}>
+                            <p style={{ textAlign: 'right' }} className="instruction-text"><b>Submitted Date:</b></p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={3}>
+                            <p  className="instruction-text">2023/03/31</p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={3}>
+                            <p style={{ textAlign: 'right' }} className="instruction-text"><b>Status:</b></p>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={5}>
+                            <p  className="instruction-text"><span style={{color:"red"}}>On Progress</span></p>
+                        </Col>
+                        
+                    </Row> */}
                     
                     
                 </Card>

@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Breadcrumb, Button, Card, Form, Input, Row, Col } from 'antd';
 import { Link } from "react-router-dom";
+import '../css/certificateVerfication.scss'
 
 const onFinish = (values: any) => {
   console.log('Success:', values);
@@ -13,7 +14,7 @@ const onFinishFailed = (errorInfo: any) => {
 const CertificateVerification: FC = () => {
   return (
     <>
-      <Card title={<h1 className="header">Clearance certificate verification</h1>} bordered={false} className="dashboard-card">
+      <Card className="dashboard-card" title={<h1 className="header">Clearance Certificate Verification</h1>} bordered={false}>
         <Row>
           <Col span={24}>
             <Breadcrumb items={[
