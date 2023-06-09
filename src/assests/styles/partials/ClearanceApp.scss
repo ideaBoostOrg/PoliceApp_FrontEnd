@@ -1,107 +1,81 @@
-.application-form {
-    // box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    // border: 1px solid #e0e0e0;
-    padding: 50px;
-    border-radius: 10px;
-    background-color: #fff;
+.error-margin .ant-form-item-explain {
+    margin-bottom: 10px;
+    /* Adjust the margin value as needed */
 }
 
-.application {
-    // color: #9797d3;
-    font-size: 35px;
+
+.submit-btn-1 {
+    width: 150px;
+    border-color: $btn-bg !important;
+    background: $btn-bg !important;
+    color: white !important;
+    padding: .3em 1em 2em 1em !important;
+    font-size: 13px !important;
+
+    &:hover {
+        background: #ffffff !important;
+        border: 1px solid $btn-bg !important;
+        color: $btn-bg !important;
+    }
 }
-.submit-btn-1{
-    height: 35px;
-    width: 100px;
-}
-.error-margin .ant-form-item-explain {
-    margin-bottom: 10px; /* Adjust the margin value as needed */
+
+@media screen and (max-width: 576px) {
+
+    #get-chapta{
+        width: 30% !important;
+        margin-top: 10px;
+    }
+
+    #btn-load{
+        width: 30% !important;
+        margin-top: 10px;
+    }
+
+    .ref-num-col{
+        padding-right: 0 !important;
+    }
+  }
+  
+  @media screen and (min-width: 577px) and (max-width: 992px) {
+    #get-chapta{
+        width: 30% !important;
+        margin-top: 10px;
+    }
+
+    #btn-load{
+        width: 30% !important;
+        margin-top: 10px;
+    }
+
+    .ref-num-col{
+        padding-right: 0 !important;
+    }
+      
+  }
+
+  @media screen and (min-width: 993px) and (max-width: 1199px) {
+    #get-chapta{
+        width: 100% !important;
+    }
+
+    #btn-load{
+        width: 100% !important;
+    }
+      
   }
 
 
-  .submit-btn-1{
-    height: 35px;
-    width: 100px;
-    border-color: $btn-bg !important;
-    background: $btn-bg !important;
-    color: white !important;
-  padding: .3em 1em 2em 1em !important;
-  font-size: 15px !important;
-
-    &:hover {
-        background: #ffffff !important;
-        border: 1px solid $btn-bg !important;
-        color: $btn-bg !important;
-      }
-}
-
-.load-btn {
-    &:hover {
-        background: #ffffff !important;
-        border: 1px solid $btn-bg !important;
-        color: $btn-bg !important;
-      }
-}
-
-.captcha-btn{
-    border-color: $btn-bg !important;
-    background: $btn-bg !important;
-    color: white !important;
-    &:hover {
-        background: #ffffff !important;
-        border: 1px solid $btn-bg !important;
-        color: $btn-bg !important;
-      }
-}
-
-
-// @media screen and (min-width: 577px) and (max-width: 992px) {
-//     .ref-number{
-//         width: 100% !important;
-//     }
-// }
-
-
-
-
-
-
-@media (max-width: 768px) {
-    .load-btn {
-        margin-top:10px !important;
-        margin-left: 222px !important;
-    }
-
-    .ref-number{
+  //Xl Screen
+  @media screen and (min-width: 1200px){
+    #get-chapta{
         width: 100% !important;
     }
-    .application-form{
-        padding: 15px;
-    }
-    .dashboard-card{
-        padding: 0 !important;
-    }
-    .date-picker{
+
+    #btn-load{
         width: 100% !important;
     }
-    .select-one{
-        width: 100% !important;
-    }
-    .age-years{
-        width: 100% !important;
-    }
-    .age-years2{
-        width: 100% !important;
-    }
-    .age-years3{
-        width: 100% !important;
-    }
-    .captcha-btn{
-        margin-top: 10px !important;
-    }
-    .submit-btn-1{
-        margin-left: 80px !important;
-        font-weight: bolder;
-        // width: 250px;
-    }
-}
+
+
+
+      
+  }
