@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { BrowserRouter as Router, Routes, Route, HashRouter, Link } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import "./assests/styles/main.scss"
-import logo from './assests/images/logo.svg';
+// import logo from './assests/images/logo.svg';
 import './assests/styles/App.css';
 import Instructions from './components/Instructions'
 import ApplicationStatusCheck from './components/ApplicationStatusCheck';
@@ -13,6 +13,7 @@ import CertificateVerification from "./components/CertificateVerification";
 import ClearanceCertificateApplication from './components/ClearanceCertificateApplication';
 import EditApplication from './components/EditApplication';
 import PaymentPage from "./components/PaymentPage";
+import Footer from "./components/Footer";
 
 
 const App: FC = () => {
@@ -34,9 +35,10 @@ const App: FC = () => {
                 <Route path="/ClearanceCertificateApplication" element={<ClearanceCertificateApplication />} />
                 <Route path="/editApplication" element={<EditApplication />} />
                 <Route path="/payment" element={<PaymentPage />} />
+                <Route path="/footer" element={<Footer />} />
             </Routes>
 
-
+        <Footer />
 
         </div>
 
