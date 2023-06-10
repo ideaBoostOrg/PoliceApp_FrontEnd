@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PoliceApp_FrontEnd/static/css/main.369f726d.css",
-    "main.js": "/PoliceApp_FrontEnd/static/js/main.1bb5b8f6.js",
+    "main.css": "/PoliceApp_FrontEnd/static/css/main.cd2aa18c.css",
+    "main.js": "/PoliceApp_FrontEnd/static/js/main.2097b781.js",
     "static/js/787.28f3ef82.chunk.js": "/PoliceApp_FrontEnd/static/js/787.28f3ef82.chunk.js",
     "index.html": "/PoliceApp_FrontEnd/index.html",
-    "main.369f726d.css.map": "/PoliceApp_FrontEnd/static/css/main.369f726d.css.map",
-    "main.1bb5b8f6.js.map": "/PoliceApp_FrontEnd/static/js/main.1bb5b8f6.js.map",
+    "main.cd2aa18c.css.map": "/PoliceApp_FrontEnd/static/css/main.cd2aa18c.css.map",
+    "main.2097b781.js.map": "/PoliceApp_FrontEnd/static/js/main.2097b781.js.map",
     "787.28f3ef82.chunk.js.map": "/PoliceApp_FrontEnd/static/js/787.28f3ef82.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.369f726d.css",
-    "static/js/main.1bb5b8f6.js"
+    "static/css/main.cd2aa18c.css",
+    "static/js/main.2097b781.js"
   ]
 }
