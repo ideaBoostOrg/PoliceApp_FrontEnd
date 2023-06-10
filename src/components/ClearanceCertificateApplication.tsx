@@ -99,7 +99,7 @@ const ClearanceCertificateApplication: React.FC = () => {
 
     return (
         <>
-            <div style={{ backgroundColor: "#F5F5F5", width: '100%', overflowX: 'hidden' }}>
+            <div style={{ backgroundColor: "#F5F5F5", width: '100%', overflowX: 'hidden'}}>
                 <Card className='dashboard-card' title={<h1 className="header">Application</h1>} bordered={false}>
                     <div>
                         <Row>
@@ -548,9 +548,6 @@ const ClearanceCertificateApplication: React.FC = () => {
                         </Row>
                     </div>
                 </Card>
-                <Row>
-                    <Footer />
-                </Row>
             </div>
 
 

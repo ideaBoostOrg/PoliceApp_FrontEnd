@@ -16,9 +16,6 @@ const Dashboard: FC = () => {
       <Card title={<h1 className='header'>Our Services</h1>} bordered={false} className="dashboard-card">
         <Services />
       </Card>
-      <Row>
-                <Footer/>
-            </Row>
     </>
   );
 };

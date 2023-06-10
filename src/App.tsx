@@ -20,25 +20,18 @@ const App: FC = () => {
     return (
         <div>
             <Header />
-
-
-
-
-
             <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/instructions" element={<Instructions />} />
                 <Route path="/statusCheck" element={<ApplicationStatusCheck />} />
                 <Route path="/requestClarificationInstructions" element={<RequestClarificationInstructions />} />
                 <Route path="/certificateVerification" element={<CertificateVerification />} />
-
                 <Route path="/ClearanceCertificateApplication" element={<ClearanceCertificateApplication />} />
                 <Route path="/editApplication" element={<EditApplication />} />
                 <Route path="/payment" element={<PaymentPage />} />
                 <Route path="/footer" element={<Footer />} />
             </Routes>
-
-
+            <Footer />
         </div>
 
     );
